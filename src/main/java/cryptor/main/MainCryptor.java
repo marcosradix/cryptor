@@ -23,7 +23,7 @@ public class MainCryptor {
 		//Algorítimos de critografia simetricos
 		//AES, RC2, RC5, IDEA, BLOWFISH
 		try {
-			KeyGenerator keyGenerator = KeyGenerator.getInstance("Blowfish");
+			KeyGenerator keyGenerator = KeyGenerator.getInstance("AES");
 			SecretKey secretKey = keyGenerator.generateKey();
 			Cipher cipher;
 			cipher = Cipher.getInstance("Blowfish");
