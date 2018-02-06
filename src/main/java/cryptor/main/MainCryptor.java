@@ -23,10 +23,10 @@ public class MainCryptor {
 		//Algorítimos de critografia simetricos
 		//AES, RC2, RC5, IDEA, BLOWFISH
 		try {
-			KeyGenerator keyGenerator = KeyGenerator.getInstance("RC5");
+			KeyGenerator keyGenerator = KeyGenerator.getInstance("BLOWFISH");
 			SecretKey secretKey = keyGenerator.generateKey();
 			Cipher cipher;
-			cipher = Cipher.getInstance("RC5");
+			cipher = Cipher.getInstance("BLOWFISH");
 			cipher.init(Cipher.ENCRYPT_MODE, secretKey);
 			byte[] senhaCriptografada = cipher.doFinal(entrada.getBytes());
 			System.out.println("Saída de texto encriptado: "+senhaCriptografada );
